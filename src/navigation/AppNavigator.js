@@ -8,6 +8,7 @@ import LoadingView from '../components/LoadingView';
 import HomeContainer from '../containers/HomeContainer';
 import MineContainer from '../containers/MineContainer';
 import WelcomeContainer from '../containers/WelcomeContainer';
+import StartScreen from '../containers/StartScreen';
 
 const AppNavigator = StackNavigator({
   Loading: { screen: LoadingView },
@@ -15,8 +16,9 @@ const AppNavigator = StackNavigator({
 HomeContainer: { screen: HomeContainer },
 MineContainer: { screen: MineContainer },
 WelcomeContainer: { screen: WelcomeContainer },
+StartScreen: { screen: StartScreen },
 }, {
-  initialRouteName: 'WelcomeContainer',
+  initialRouteName: 'StartScreen',
   headerMode: 'none',
 });
 
