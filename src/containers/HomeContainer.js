@@ -32,12 +32,7 @@ class HomeContainer extends Component {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
-        <Button
-        title="Go to Jane's Mine"
-        onPress={() =>
-          navigate('MineContainer', { name: 'Jane' })
-        }
-      />
+  
       </View>
     );
   }
