@@ -9,8 +9,10 @@ import {
     Text,
     View,
     Image,
-    Animated
+    Animated,
+    Easing
 } from 'react-native';
+import utils from '../constants/utils';
 import hello from '../resources/images/hello.jpg';
 
 class StartScreen extends Component {
@@ -20,28 +22,27 @@ class StartScreen extends Component {
           fadeAnim: new Animated.Value(0), // init opacity 0
         };
       }
-      componentDidMount() {
-        Animated.timing(          // Uses easing functions
-          this.state.fadeAnim,    // The value to drive
-          {toValue: 1},           // Configuration
-        ).start();                // Don't forget start!
-      }
+    componentDidMount() {
+        this.startAnimation();
+     
+    }
+    startAnimation() {
+      
+        this.state.fadeAnim.setValue(1);
+        console.log( this.state.fadeAnim);
+        Animated.timing(this.state.fadeAnim, {
+            toValue: 0,
+            duration: 2000,
+            easing: Easing.linear,// 线性的渐变函数
+        }).start();
+        this.timer = setTimeout(() => {
+        utils.viewTo('WelcomeContainer');},2000);
+    }
     render() {
-        this._animatedValue = new Animated.Value(0);
-        let interpolatedColorAnimation = this._animatedValue.interpolate({
-                  inputRange: [0, 100],
-                  outputRange: [0, 1]
-                });
         return (
             <View style={styles.container}>
                 <Animated.Image
-                    onLoadEnd={() => {
-                        Animated.timing(this._animatedValue, {
-                            toValue: 100,
-                            duration: 1000
-                        }).start()
-                    }}
-                    source={hello} style={[styles.img, { opacity: interpolatedColorAnimation} ]}/>
+                    source={hello} style={[styles.img, { opacity: this.state.fadeAnim} ]}/>
 
             </View>
         );
