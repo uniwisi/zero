@@ -22,21 +22,7 @@ class HomeContainer extends Component {
     return (
      
       <View style={styles.container}>
-     <Image style={{height:200,width:200}} source={leimu} resizeMode="contain"></Image>
-     <TouchableOpacity style={{width:100,height:100,backgroundColor:'#91bef0',justifyContent:'center'}}
-     onPress={() => utils.viewTo('HomeContainer')}>
-     <Text style={styles.instructions}>
-     雷姆
-    </Text>
-     </TouchableOpacity>
-    
-{/**   <Image source={leimu}   style={{width:200,height:200}}resizeMode="cover"></Image>*/} 
-     <TouchableOpacity style={{width:100,height:100,backgroundColor:'#f8aec0',justifyContent:'center'}}
-     onPress={() => utils.viewTo('MineContainer')}>
-     <Text style={styles.instructions}>
-     拉姆
-    </Text>
-    </TouchableOpacity>
+     <Image style={{flex:1}} source={leimu} resizeMode="contain"></Image>
       </View>
     );
   }

@@ -15,7 +15,7 @@ class MineContainer extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Image style={{height:200,width:200}} source={lamu} resizeMode="contain" ></Image>
+      <Image style={{flex:1}} source={lamu} resizeMode="contain" ></Image>
        </View>
     );
   }
