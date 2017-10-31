@@ -14,7 +14,7 @@ const AppNavigator = StackNavigator({
 HomeContainer: { screen: HomeContainer },
 MineContainer: { screen: MineContainer },
 }, {
-  initialRouteName: 'Loading',
+  initialRouteName: 'HomeContainer',
   headerMode: 'none',
 });
 
