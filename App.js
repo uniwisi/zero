@@ -13,7 +13,8 @@ import {
   View,
   ScrollView,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  StatusBar
 } from 'react-native';
 import AppNavigator from './src/navigation/AppNavigator';
 import utils from './src/constants/utils';
@@ -38,7 +39,7 @@ export default class reactNative extends Component {
   render() {
     return (
       <View style={styles.container}>
-     
+      <StatusBar backgroundColor="rgba(0,0,0,0)" translucent barStyle={'light-content'} />
         <View style={{flex:1}}>
         <AppNavigator
         ref={this.setNavGlobal}
