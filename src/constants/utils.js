@@ -37,6 +37,7 @@ const util = {
 
   // 打印当前路由信息，并执行相关操作
   doWithRouteChange(prevState, currentState) {
+    debugger;
     const getCurrentRouteName = (navigationState) => {
       if (!navigationState) {
         console.log('未获取到路由状态');
@@ -91,11 +92,11 @@ const util = {
       $Log = 'push: ';
       util.pushRouteHandle(global.appRouteIsPush.pop());
         // global.appRouteIsPush++;
-    } else if ((routeList[routeLength - 2].routeName) === currentScreen) {
+    } else if ((routeList[routeLength - 1].routeName) === currentScreen) {
         //  android硬件返回
       $Log = '硬件返回: ';
       util.popRouteHandle();
-    } else if (routeLength === 2 && currentScreen === 'Main') {
+    } else if (routeLength === 1 && currentScreen === 'WelcomeContainer') {
         //  android硬件返回最外层
       $Log = '硬件返回最外层: ';
       util.popRouteHandle();

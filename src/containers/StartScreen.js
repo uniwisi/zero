@@ -12,6 +12,7 @@ import {
     Animated,
     Easing
 } from 'react-native';
+import forge from 'node-forge';
 import utils from '../constants/utils';
 import hello from '../resources/images/hello.jpg';
 
@@ -23,6 +24,7 @@ class StartScreen extends Component {
         };
       }
     componentDidMount() {
+    
         this.startAnimation();
      
     }
@@ -43,7 +45,7 @@ class StartScreen extends Component {
             <View style={styles.container}>
                 <Animated.Image
                     source={hello} style={[styles.img, { opacity: this.state.fadeAnim} ]}/>
-
+                <Text>hello world!</Text>
             </View>
         );
     }
