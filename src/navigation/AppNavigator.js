@@ -11,6 +11,7 @@ import WelcomeContainer from '../containers/WelcomeContainer';
 import StartScreen from '../containers/StartScreen';
 import TestContainer from '../containers/TestContainer';
 import GameTwoContainer from '../containers/GameTwoContainer';
+import GameThreeContainer from '../containers/GameThreeContainer';
 
 const AppNavigator = StackNavigator({
   Loading: { screen: LoadingView },
@@ -21,6 +22,7 @@ WelcomeContainer: { screen: WelcomeContainer },
 StartScreen: { screen: StartScreen },
 TestContainer:{screen:TestContainer},
 GameTwoContainer:{screen:GameTwoContainer},
+GameThreeContainer:{screen:GameThreeContainer},
 }, {
   initialRouteName: 'StartScreen',
   headerMode: 'none',

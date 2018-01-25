@@ -37,7 +37,6 @@ const util = {
 
   // 打印当前路由信息，并执行相关操作
   doWithRouteChange(prevState, currentState) {
-    debugger;
     const getCurrentRouteName = (navigationState) => {
       if (!navigationState) {
         console.log('未获取到路由状态');

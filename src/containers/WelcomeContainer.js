@@ -108,6 +108,9 @@ class WelcomeContainer extends Component {
         <TouchableOpacity  style={{backgroundColor:'#CCEEFF',paddingHorizontal:20,paddingVertical:10}}
         onPress={() => utils.viewTo('GameTwoContainer')}>
         <Text style={styles.instructions}>game-->2</Text></TouchableOpacity>
+        <TouchableOpacity  style={{backgroundColor:'#CCEEFF',paddingHorizontal:20,paddingVertical:10}}
+        onPress={() => utils.viewTo('GameThreeContainer')}>
+        <Text style={styles.instructions}>game-->3狼人杀</Text></TouchableOpacity>
         
       </View>
     );
