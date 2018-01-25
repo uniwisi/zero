@@ -83,7 +83,7 @@ class GameThreeContainer extends Component {
 
 
   componentDidMount() {
-  
+  this.range();
   }
 
   random=(min, max) =>{
